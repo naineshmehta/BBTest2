@@ -20,10 +20,7 @@ namespace BBTest2
 
         public decimal CalculateDiscount()
         {
-            decimal sum = 0;
-            foreach (IDiscounts discount in _discounts)
-                sum += discount.HasMatched(_basket.Products) ? discount.ReturnDiscount(_basket.Products) : 0;
-            return sum;
+            return _discounts.Sum(discount => discount.HasMatched(_basket.Products) ? discount.ReturnDiscount(_basket.Products) : 0);
         }
     }
 }
