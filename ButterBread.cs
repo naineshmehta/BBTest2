@@ -14,8 +14,13 @@ namespace BBTest2
 
         public bool HasMatched(List<Product> products)
         {
-            var breadcount = products.Count(x => x.Name == "bread");
-            return breadcount == 2;
+            var butterCount = products.Count(x => x.Name == "butter");
+            return butterCount == 2;
+        }
+
+        public decimal ReturnDiscount(List<Product> products)
+        {
+            return DiscountValue;
         }
     }
 }

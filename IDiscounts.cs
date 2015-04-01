@@ -7,5 +7,6 @@ namespace BBTest2
     {
         decimal DiscountValue { get; set; }
         Boolean HasMatched(List<Product> products);
+        decimal ReturnDiscount(List<Product> products);
     }
 }
